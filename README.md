@@ -334,7 +334,7 @@ We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) f
 
 ## License
 
-MIT License - see [LICENSE](LICENSE) file for details.
+PolyForm Noncommercial 1.0.0 License - see [LICENSE](LICENSE) file for details.
 
 ## Support
 
