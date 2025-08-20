@@ -85,9 +85,8 @@ your-snippets-repo/
 ├── python/
 │   ├── snippet/
 │   │   └── decorators/
-│   │       └── cache/
-│   │           ├── cache.py
-│   │           └── cache.meta.json
+│   │       ├── cache.py
+│   │       └── cache.meta.json
 │   └── boilerplate/
 │       └── flask-api/
 │           ├── app.py
@@ -96,9 +95,8 @@ your-snippets-repo/
 └── css/
     └── snippet/
         └── animations/
-            └── fade-in/
-                ├── styles.css
-                └── styles.meta.json
+            ├── fade-in.css
+            └── fade-in.meta.json
 ```
 
 ### Metadata Format
