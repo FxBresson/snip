@@ -223,7 +223,9 @@ export class PullCommand extends Command {
         const selectedBaseName = chalk.cyan(`${chalk.bold(item.name)} (${item.type})`)
 
         const description = item.metadata?.description || ''
-        const location = `${item.repository}/${item.scope}${item.category ? `/${item.category}` : ''}/${item.name}`
+        const location = `${item.repository}/${item.type}/${item.scope}${item.category ? `/${item.category}` : ''}/${
+          item.name
+        }`
 
         const name = `${baseName}${description ? `: ${description}` : ''}${chalk.grey(` - [${location}]`)}`
         const selectedName = `${selectedBaseName}${chalk.cyan(

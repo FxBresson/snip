@@ -2,6 +2,8 @@
 
 A powerful CLI tool for managing and sharing code snippets, boilerplates, and modules across projects and teams. Snip allows developers to organize reusable code in Git repositories and quickly access them from anywhere.
 
+[![npm version](https://img.shields.io/npm/v/@snip/cli.svg)](https://www.npmjs.com/package/@snip/cli)
+
 ## Features
 
 - 🔍 **Fuzzy Search**: Quickly find snippets using intelligent search across names, descriptions, and tags

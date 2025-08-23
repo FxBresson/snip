@@ -1,58 +1,39 @@
 {
-  "name": "snip",
+  "name": "@snip/cli",
   "description": "A CLI tool for managing and sharing code snippets across projects and teams",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "author": "François-Xavier Bresson",
-  "license": "PolyForm Noncommercial 1.0.0",
+  "license": "UNLICENSED",
   "bin": {
     "snip": "./bin/run.js"
   },
-  "bugs": "https://github.com/perso/snip/issues",
-  "dependencies": {
-    "@oclif/core": "^4",
-    "@oclif/plugin-help": "^6",
-    "chalk": "^5.4.1",
-    "clipboardy": "^4.0.0",
-    "fs-extra": "^11.3.0",
-    "fuzzy": "^0.1.3",
-    "inquirer": "^12.8.2",
-    "ora": "^8.2.0",
-    "simple-git": "^3.28.0"
-  },
-  "devDependencies": {
-    "@eslint/compat": "^1",
-    "@oclif/prettier-config": "^0.2.1",
-    "@oclif/test": "^4",
-    "@types/chai": "^4",
-    "@types/fs-extra": "^11.0.4",
-    "@types/inquirer": "^9.0.8",
-    "@types/mocha": "^10",
-    "@types/node": "^18",
-    "chai": "^4",
-    "eslint": "^9",
-    "eslint-config-oclif": "^6",
-    "eslint-config-prettier": "^10",
-    "mocha": "^10",
-    "oclif": "^4",
-    "shx": "^0.3.3",
-    "ts-node": "^10",
-    "typescript": "^5"
-  },
+  "main": "dist/index.js",
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=20.0.0"
   },
   "files": [
     "./bin",
     "./dist",
     "./oclif.manifest.json"
   ],
-  "homepage": "https://github.com/perso/snip",
+  "repository": "FxBresson/snip",
+  "homepage": "https://github.com/FxBresson/snip",
+  "bugs": "https://github.com/FxBresson/snip/issues",
+  "type": "module",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build:link": "yarn build && npm link",
+    "build": "shx rm -rf dist && tsc -b",
+    "lint": "eslint",
+    "postpack": "shx rm -f oclif.manifest.json",
+    "posttest": "yarn lint",
+    "prepack": "oclif manifest && oclif readme",
+    "test": "mocha --forbid-only \"test/**/*.test.ts\"",
+    "version": "oclif readme && git add README.md"
+  },
   "keywords": [
     "oclif"
   ],
-  "license": "MIT",
-  "main": "dist/index.js",
-  "type": "module",
   "oclif": {
     "bin": "snip",
     "dirname": "snip",
@@ -67,16 +48,40 @@
       }
     }
   },
-  "repository": "perso/snip",
-  "scripts": {
-    "build:link": "yarn build && npm link",
-    "build": "shx rm -rf dist && tsc -b",
-    "lint": "eslint",
-    "postpack": "shx rm -f oclif.manifest.json",
-    "posttest": "yarn lint",
-    "prepack": "oclif manifest && oclif readme",
-    "test": "mocha --forbid-only \"test/**/*.test.ts\"",
-    "version": "oclif readme && git add README.md"
+  "dependencies": {
+    "@oclif/core": "^4",
+    "@oclif/plugin-help": "^6",
+    "chalk": "^5.4.1",
+    "clipboardy": "^4.0.0",
+    "fs-extra": "^11.3.0",
+    "fuzzy": "^0.1.3",
+    "inquirer": "^12.8.2",
+    "ora": "^8.2.0",
+    "simple-git": "^3.28.0"
   },
-  "types": "dist/index.d.ts"
+  "devDependencies": {
+    "@eslint/compat": "^1",
+    "@oclif/prettier-config": "^0.2.1",
+    "@oclif/test": "^4.1.13",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/npm": "^12.0.2",
+    "@types/chai": "^5.2.2",
+    "@types/fs-extra": "^11.0.4",
+    "@types/inquirer": "^9.0.8",
+    "@types/mocha": "^10",
+    "@types/node": "^24.3.0",
+    "@types/sinon": "^17.0.4",
+    "chai": "^5.3.1",
+    "eslint": "^9",
+    "eslint-config-oclif": "^6",
+    "eslint-config-prettier": "^10",
+    "mocha": "^11.7.1",
+    "oclif": "^4",
+    "semantic-release": "^24.2.7",
+    "shx": "^0.4.0",
+    "sinon": "^21.0.0",
+    "ts-node": "^10",
+    "typescript": "^5"
+  }
 }
