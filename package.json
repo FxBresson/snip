@@ -1,7 +1,7 @@
 {
   "name": "@snip/cli",
   "description": "A CLI tool for managing and sharing code snippets across projects and teams",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "François-Xavier Bresson",
   "license": "UNLICENSED",
   "bin": {
